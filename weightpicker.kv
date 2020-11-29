@@ -1,6 +1,10 @@
 <FloatLayout>:
 	btn: btn
+	bar: bar
+	weight: weight
+	output: output
 	cols: 1
+
 	Label:
 		text: "Bar Weight"
 		size_hint: 0.4, 0.08
@@ -26,7 +30,6 @@
 		halign: 'left'
 		valign: 'middle'
 
-
 	TextInput:
 		id: weight
 		pos_hint: {"x":0.5, "top": 0.85}
@@ -34,9 +37,10 @@
 		font_size: (root.width**2 + root.height**2) / 12**4
 		multiline: False
 
+
 	Label:
 		id: output
-		text: "2x 45lbs\n\n1x 35lbs\n\n1x 25lbs\n\n2x 10lbs\n\n1x 5lbs\n\n1x 2.5lbs"
+		text: "Welcome To The Weight Picker"
 		size_hint: 0.5, 0.55
 		pos_hint: {"x":0.25, "top": 0.75}
 		font_size: (root.width**2 + root.height**2) / 13**4
@@ -47,8 +51,9 @@
 
 
 	Button:
+		id: btn
 		size_hint: 0.5, 0.12
 		pos_hint: {"x":0.25, "top":0.2}
-		id: btn
 		text: "Calculate Weights"
-		size_hint: 
+		on_release:
+			text = root.DoTheThing()
