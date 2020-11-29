@@ -12,8 +12,8 @@
 
 	TextInput:
 		id: bar
-		pos_hint: {"x":0.4, "top": 0.95}
-		size_hint: 0.5, 0.07
+		pos_hint: {"x":0.5, "top": 0.95}
+		size_hint: 0.45, 0.07
 		font_size: (root.width**2 + root.height**2) / 12**4
 		multiline: False
 
@@ -26,19 +26,20 @@
 		halign: 'left'
 		valign: 'middle'
 
+
 	TextInput:
 		id: weight
-		pos_hint: {"x":0.4, "top": 0.85}
-		size_hint: 0.5, 0.07
-		font_size: (root.width**2 + root.height**2) / 14**4
+		pos_hint: {"x":0.5, "top": 0.85}
+		size_hint: 0.45, 0.07
+		font_size: (root.width**2 + root.height**2) / 12**4
 		multiline: False
 
 	Label:
 		id: output
 		text: "2x 45lbs\n\n1x 35lbs\n\n1x 25lbs\n\n2x 10lbs\n\n1x 5lbs\n\n1x 2.5lbs"
-		size_hint: 0.5, 0.5
+		size_hint: 0.5, 0.55
 		pos_hint: {"x":0.25, "top": 0.75}
-		font_size: (root.width**2 + root.height**2) / 12.5**4
+		font_size: (root.width**2 + root.height**2) / 13**4
 		text_size: self.size
 		halign: 'left'
 		valign: 'middle'
