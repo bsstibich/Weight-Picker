@@ -3,6 +3,7 @@ from kivy.app import App
 from kivy.uix.floatlayout import FloatLayout
 from kivy.core.window import Window
 from kivy.properties import ObjectProperty
+
 #Window.size = (414, 896) #xr scaled down
 Window.size = (360, 760) #s10+ scaled down
 #Window.size = (360, 844) #i12 scaled down

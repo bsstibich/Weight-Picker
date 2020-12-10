@@ -1,7 +1,7 @@
 <FloatLayout>:
 	btn: btn
-	bar: bar
-	weight: weight
+	#bar: bar
+	#weight: weight
 	output: output
 	cols: 1
 
@@ -14,12 +14,17 @@
 		halign: 'left'
 		valign: 'middle'
 
-	TextInput:
-		id: bar
-		pos_hint: {"x":0.5, "top": 0.95}
-		size_hint: 0.45, 0.07
-		font_size: (root.width**2 + root.height**2) / 12**4
-		multiline: False
+	CheckBox:
+		#on_active:
+		size_hint_x: .2
+		pos_hint: {"x":0.5, "top": 0.8}
+
+	# TextInput:
+		#id: bar
+		#pos_hint: {"x":0.5, "top": 0.95}
+		#size_hint: 0.45, 0.07
+		#font_size: (root.width**2 + root.height**2) / 12**4
+		#multiline: False
 
 	Label:
 		text: "Working Weight"
@@ -30,12 +35,12 @@
 		halign: 'left'
 		valign: 'middle'
 
-	TextInput:
-		id: weight
-		pos_hint: {"x":0.5, "top": 0.85}
-		size_hint: 0.45, 0.07
-		font_size: (root.width**2 + root.height**2) / 12**4
-		multiline: False
+	# TextInput:
+	#	id: weight
+	#	pos_hint: {"x":0.5, "top": 0.85}
+	#	size_hint: 0.45, 0.07
+	#	font_size: (root.width**2 + root.height**2) / 12**4
+	#	multiline: False
 
 
 	Label:
