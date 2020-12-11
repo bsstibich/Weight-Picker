@@ -14,10 +14,36 @@
 		halign: 'left'
 		valign: 'middle'
 
+	Label:
+		text: "25 lbs"
+		size_hint: 0.2, 0.05
+		pos_hint: {"x":0.6, "top": 0.95}
+		font_size: (root.width**2 + root.height**2) / 15**4
+		text_size: self.size
+
+	Label:
+		text: "45 lbs"
+		size_hint: 0.2, 0.05
+		pos_hint: {"x":0.8, "top": 0.95}
+		font_size: (root.width**2 + root.height**2) / 15**4
+		text_size: self.size
+		
+
 	CheckBox:
 		#on_active:
-		size_hint_x: .2
-		pos_hint: {"x":0.5, "top": 0.8}
+		id: '45'
+		group: 'bar'
+		size_hint_x: .1
+		size_hint_y: .1
+		pos_hint: {"x":0.7, "top": 0.96}
+
+	CheckBox:
+		#on_active:
+		id: '25'
+		group: 'bar'
+		size_hint_x: .1
+		size_hint_y: .1
+		pos_hint: {"x":0.5, "top": 0.96}
 
 	# TextInput:
 		#id: bar
@@ -35,12 +61,12 @@
 		halign: 'left'
 		valign: 'middle'
 
-	# TextInput:
-	#	id: weight
-	#	pos_hint: {"x":0.5, "top": 0.85}
-	#	size_hint: 0.45, 0.07
-	#	font_size: (root.width**2 + root.height**2) / 12**4
-	#	multiline: False
+	TextInput:
+		id: weight
+		pos_hint: {"x":0.5, "top": 0.85}
+		size_hint: 0.45, 0.07
+		font_size: (root.width**2 + root.height**2) / 12**4
+		multiline: False
 
 
 	Label:
