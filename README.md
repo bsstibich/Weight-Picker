@@ -1,2 +1,2 @@
 # Weight-Picker
-Practice Kivy app to pick weights for a barbell workout.
+Practice Android Kivy app to pick weights for a barbell workout.
