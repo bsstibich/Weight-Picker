@@ -1,6 +1,5 @@
 <FloatLayout>:
 	btn: btn
-	#bar: bar
 	weight: weight
 	output: output
 	four: four
@@ -31,27 +30,22 @@
 		text_size: self.size
 		
 	CheckBox: 
-		#on_active:
+		on_active: root.barManage()
 		id: four
 		group: 'bar'
 		size_hint_x: .1
 		size_hint_y: .1
 		pos_hint: {"x":0.7, "top": 0.96}
+		active: root.checkBoxCheck(45)
 
 	CheckBox:
-		#on_active:
+		on_active: root.barManage()
 		id: two
 		group: 'bar'
 		size_hint_x: .1
 		size_hint_y: .1
 		pos_hint: {"x":0.47, "top": 0.96}
-
-	# TextInput:
-		#id: bar
-		#pos_hint: {"x":0.5, "top": 0.95}
-		#size_hint: 0.45, 0.07
-		#font_size: (root.width**2 + root.height**2) / 12**4
-		#multiline: False
+		active: root.checkBoxCheck(25)
 
 	Label:
 		text: "Working Weight"

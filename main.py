@@ -1,8 +1,11 @@
+import pickle
 import kivy
 from kivy.app import App
 from kivy.uix.floatlayout import FloatLayout
 from kivy.core.window import Window
 from kivy.properties import ObjectProperty
+from kivy.uix.checkbox import CheckBox
+
 
 #Window.size = (414, 896) #xr scaled down
 Window.size = (360, 760) #s10+ scaled down
@@ -11,20 +14,28 @@ Window.size = (360, 760) #s10+ scaled down
 
 class FloatLayout(FloatLayout):
 	btn = ObjectProperty(None)
-	#bar = ObjectProperty(None)
 	weight = ObjectProperty(None)
 	output = ObjectProperty(None)
 	four = ObjectProperty(None)
 	two = ObjectProperty(None)
+	with open ('bar.swole','rb') as file:
+		bar = pickle.load(file)
+	
+	def checkBoxCheck(self, num):
+		if self.bar == num:
+			return True
 
+	def barManage(self):
+		if (self.two.active):
+			self.bar = 25
+		else:
+			self.bar = 45
+			
+		with open('bar.swole','wb') as file:
+			pickle.dump(self.bar, file)
 
 	def DoTheThing(self):
-		if (self.two.active):
-			bar = 25
-		else:
-			bar = 45
-		weight = int(self.weight.text) - bar
-		#weight = int(self.weight.text) - int(self.bar.text)#text input
+		weight = int(self.weight.text) - self.bar
 		plates = {"45":0, "35":0, "25":0, "10":0, "5":0,"2.5":0}
 		output = "Weights On Each Side:\n\n"
 		if weight%10 == 5 or weight%10 == 0:
@@ -65,9 +76,6 @@ class WeightPicker(App):
 
 	def build(self):
 		return FloatLayout()
-
-	
-
 
 if __name__ == "__main__":
 	WeightPicker().run()
