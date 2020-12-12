@@ -1,2 +1,0 @@
-set solib-search-path /home/turtletart/Weight-Picker/.buildozer/android/platform/build-armeabi-v7a/build/other_builds/sqlite3/armeabi-v7a__ndk_target_21/sqlite3/obj/local/armeabi-v7a
-directory /home/turtletart/.buildozer/android/platform/android-ndk-r19c/toolchains/llvm/prebuilt/linux-x86_64/sysroot /home/turtletart/Weight-Picker/.buildozer/android/platform/build-armeabi-v7a/build/other_builds/sqlite3/armeabi-v7a__ndk_target_21/sqlite3/jni/.. /home/turtletart/.buildozer/android/platform/android-ndk-r19c/sources/cxx-stl/system
