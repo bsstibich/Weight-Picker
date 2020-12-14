@@ -14,7 +14,7 @@ Window.clearcolor = (.108, .114, .126, 1)
 #Window.size = (360, 760) #s10+ scaled down
 #Window.size = (360, 844) #i12 scaled down
 #Window.size = (375, 667) #generic scaled down
-Window.size = (1440,3040)
+#Window.size = (1440,3040)
 
 class FloatLayout(FloatLayout):
 	btn = ObjectProperty(None)
