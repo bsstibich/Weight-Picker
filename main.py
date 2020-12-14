@@ -5,12 +5,16 @@ from kivy.uix.floatlayout import FloatLayout
 #from kivy.core.window import Window
 from kivy.properties import ObjectProperty
 from kivy.uix.checkbox import CheckBox
+from kivy.core.window import Window
+
+Window.clearcolor = (.108, .114, .126, 1)
 
 
 #Window.size = (414, 896) #xr scaled down
 #Window.size = (360, 760) #s10+ scaled down
 #Window.size = (360, 844) #i12 scaled down
 #Window.size = (375, 667) #generic scaled down
+Window.size = (1440,3040)
 
 class FloatLayout(FloatLayout):
 	btn = ObjectProperty(None)
