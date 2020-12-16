@@ -7,7 +7,7 @@ title = Weight Picker
 package.name = weightpicker
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.test
+package.domain = org.bsstibich
 
 # (str) Source code where the main.py live
 source.dir = .
